@@ -455,12 +455,5 @@ var _prependPath = function (key, base) {
   return key + base;
 };
 
-try {
-  customize()({a: {'%': {c: {r: 's'}}}}, {a: {'%': {c: String}}});
-} catch (err) {
-  console.error(err.message);
-}
-
-
   return { customize: customize, check: customize(), Match: Match};
 }).call(this);

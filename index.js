@@ -411,7 +411,7 @@ function formatPattern(pattern) {
   }
   
   var proto = Object.getPrototypeOf(pattern)
-  if (proto && proto.__formatPattern) return proto.__formatPattern(formatPattern);
+  if (proto && proto.__formatPattern) return pattern.__formatPattern(formatPattern);
 
   // A function that isn't something we special-case is assumed to be a
   // constructor.

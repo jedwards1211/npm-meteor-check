@@ -161,8 +161,9 @@ var ObjectIncluding = function (pattern) {
   this.pattern = pattern;
 };
 ObjectIncluding.prototype.__formatPattern = function __formatPattern(formatPattern) {
-  return '{' + Object.keys(this.pattern).map(function (key) { 
-    return formatKey(key) + ': ' + formatPattern(this.pattern[key]); 
+  var pattern = this.pattern;
+  return '{' + Object.keys(pattern).map(function (key) { 
+    return formatKey(key) + ': ' + formatPattern(pattern[key]); 
   }) .join(', ') + '}';
 };
 
